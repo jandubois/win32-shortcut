@@ -734,6 +734,8 @@ First implementation of the IShellLink interface (wow, it works!); can
 
 Aldo Calpini L<dada@perl.it>
 
+Distributed under the terms of Larry Wall's Artistic License.
+
 =head1 CREDITS
 
 Thanks to: Jesse Dougherty, Dave Roth, ActiveWare, and the
@@ -746,7 +748,5 @@ even reverse engineer this software at your will. Keep in mind,
 however, that NOTHING IS GUARANTEED to work and everything you do is AT
 YOUR OWN RISK - I will not take responsability for any damage, loss of
 money and/or health that may arise from the use of this program!>
-
-This is distributed under the terms of Larry Wall's Artistic License.
 
 =cut
