@@ -8,7 +8,7 @@ package Win32::Shortcut;
 #
 #######################################################################
 
-$VERSION = "0.07";
+$VERSION = "0.08";
 
 require Exporter;
 require DynaLoader;
