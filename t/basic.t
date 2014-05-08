@@ -5,6 +5,7 @@ use Win32::Shortcut;
 use File::Temp qw( tempdir );
 
 my $dir = tempdir( CLEANUP => 1 );
+$dir = Cygwin::posix_to_win_path($dir) if $^O eq 'cygwin';
 
 my $lnk1 = Win32::Shortcut->new;
 isa_ok $lnk1, 'Win32::Shortcut';
