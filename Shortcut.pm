@@ -335,6 +335,7 @@ management of shortcut files from Perl.
   $LINK = Win32::Shortcut->new();
   $LINK->{'Path'} = "C:\\Directory\\Target.exe";
   $LINK->{'Description'} = "Target executable";
+  $LINK->{'Hotkey'} = (0x04+0x02)*256+ord('Q'); #Ctrl+Alt+Q
   $LINK->Save("Target.lnk");
   $LINK->Close();
 
@@ -547,7 +548,7 @@ Example:
   $LINK->WorkingDirectory("C:\\PERL5\\BIN");
   $LINK->Description("Prints out the version of Perl");
   $LINK->ShowCmd(SW_SHOWMAXIMIZED);
-  $LINK->Hotkey(hex('0x0337'));
+  $LINK->Hotkey(0x0337);
   $LINK->IconLocation("C:\\WINDOWS\\SYSTEM\\COOL.DLL");
   $LINK->IconNumber(1);
 
@@ -610,8 +611,8 @@ argument is not specified).
 The hotkey associated to the shortcut, in the form of a 2-byte number
 of which the first byte identifies the modifiers (Ctrl, Alt, Shift...
 but I didn't find out how it works) and the second is the ASCII code of
-the character key. Correspond to the "B<Shortcut key>" field of a
-Shortcut Properties Dialog Box.
+the character key. It is described in L<WM_GETHOTKEY description in MSDN|https://msdn.microsoft.com/en-us/library/windows/desktop/ms646278(v=vs.85).aspx>
+Correspond to the "B<Shortcut key>" field of a Shortcut Properties Dialog Box.
 
 =item B<IconLocation>
 
